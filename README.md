@@ -1,2 +1,7 @@
-# about-me
-201 first week project
+# About Me Projects
+
+## Author : Jonathan Staib
+
+## Lab 02
+
+## Lab 03
