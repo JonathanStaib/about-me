@@ -1,5 +1,10 @@
 body {
-  background-color: aqua;
+  background-color: rgb(192, 191, 191);
+  border: 20px groove rgb(98, 216, 255);;
+  padding: 20px;
+  margin: 5px;
+  font-family: 'Courier New', Courier, monospace;
+
 }
 
 h1 {
