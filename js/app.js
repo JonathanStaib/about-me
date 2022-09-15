@@ -46,9 +46,9 @@ if(questionFour === 'y' || questionFour === 'yes'){
 
 
 
-let userGuess = prompt('Lets play a game! Guess what Number I am thinking of! 1-25, you get 4 chances!');
+let userGuess = +prompt('Lets play a game! Guess what Number I am thinking of! 1-25, you get 4 chances!');
 
-let myNum = '23';
+let myNum = 23;
 let totalGuesses = 4;
 let foundNum = false;
 
@@ -64,22 +64,22 @@ while(foundNum === false && totalGuesses > 0 ){
     alert(`Correct ${userName}! ${userGuess} was the right answer!`);
   }
   else if(userGuess > myNum){
-    userGuess = prompt(`${userGuess} is too high! Please try again!`);
+    userGuess = +prompt(`${userGuess} is too high! Please try again!`);
     totalGuesses--;
   }
   else if(userGuess < myNum){
-    userGuess = prompt(`${userGuess} is too low! Please try again!`);
+    userGuess = +prompt(`${userGuess} is too low! Please try again!`);
     totalGuesses--;
   }
   totalGuesses--;
 }
 if(foundNum === false){
-  alert(`Sorry ${userName} the correct answer was ${myNum}`)
+  alert(`Sorry ${userName}, you are out of guesses. The correct answer was ${myNum} !`);
 }
 
-let gamesGuess = prompt('What is a game that I play?');
+let gamesGuess = prompt('What is a game that I play?').toLowerCase();
 
-let answers = ['Valorant',' League of Legends',' LoL',' Apex Legends', ' Apex', ' Osu'];
+let answers = ['Valorant', 'League of Legends', 'LoL', 'Apex Legends', 'Apex', 'Osu'];
 let gameGuesses = 0;
 
 while(gameGuesses < 6 ){
@@ -87,12 +87,12 @@ while(gameGuesses < 6 ){
   for(let i = 0; i < answers.length; i++){
     if(gamesGuess === answers[i]){
       score++;
-      alert('Correct, that is a game that I play!');
+      alert('Correct! I play Valorant, League of Legends, Osu and Apex Legends sometimes!');
       gameGuesses = 6;
       i = 6;
     }
     else if(gamesGuess !== answers[i]){
-      gamesGuess = prompt('Sorry, that is not a game I play. Please try again!');
+      gamesGuess = prompt('Sorry, that is not a game I play. Please try again!').toLowerCase();
       gameGuesses++;
     }
   }
